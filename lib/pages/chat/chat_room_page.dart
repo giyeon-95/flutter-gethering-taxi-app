@@ -16,7 +16,7 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading:  IconButton(
+        leading: IconButton(
             onPressed: () {
               Navigator.pop(context); //뒤로가기
             },
@@ -89,7 +89,10 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
                     padding: const EdgeInsets.symmetric(
                         vertical: 10, horizontal: 20),
                     child: Text('Shall We Dance? ',
-                        style: Theme.of(context).textTheme.bodyText1.copyWith(color: Colors.white)),
+                        style: Theme.of(context)
+                            .textTheme
+                            .bodyText1
+                            .copyWith(color: Colors.white)),
                   ),
                 ),
                 const SizedBox(width: 5),
@@ -111,7 +114,7 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
       child: Container(
         child: ListTile(
           title: Padding(
-            padding: const EdgeInsets.only(left: 160),
+            padding: const EdgeInsets.only(left: 150),
             child: Row(
               children: [
                 Text(

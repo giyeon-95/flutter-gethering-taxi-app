@@ -279,7 +279,9 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            const SizedBox(height: 3),
+            const SizedBox(height: 5),
+
+            //Date
             Align(
               alignment: Alignment.centerRight,
               child: const Text(
