@@ -1,10 +1,10 @@
+import 'package:database_project/pages/main_tab_page.dart';
 import 'package:flutter/material.dart';
 import 'package:database_project/config/constants.dart';
-import 'package:database_project/registration_screen.dart';
+import 'package:database_project/pages/auth/signup_page.dart';
+import 'package:get/route_manager.dart';
 
 class SignInPage extends StatefulWidget {
-  static const String id = 'login_page';
-
   static const url = "/signin";
 
   @override
@@ -131,7 +131,7 @@ class _SignInPageState extends State<SignInPage> {
       width: double.infinity,
       child: RaisedButton(
         elevation: 5.0,
-        onPressed: () => print('Login Button Pressed'),
+        onPressed: () => Get.offAllNamed(MainTapPage.url),
         padding: EdgeInsets.all(15.0),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0),
@@ -158,7 +158,7 @@ class _SignInPageState extends State<SignInPage> {
           Navigator.push(
             context,
             MaterialPageRoute(builder: (context) {
-              return RegistrationScreen();
+              return SignUpPage();
             }),
           );
         },
