@@ -1,5 +1,5 @@
 import 'package:database_project/pages/main/Noti_page.dart';
-import 'package:database_project/pages/main/chat_page.dart';
+import 'package:database_project/pages/chat/chat_page.dart';
 import 'package:database_project/pages/main/home_page.dart';
 import 'package:database_project/pages/main/my_page.dart';
 import 'package:database_project/pages/main/search_page.dart';
