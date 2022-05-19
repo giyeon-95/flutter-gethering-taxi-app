@@ -40,12 +40,11 @@ class MyApp extends StatelessWidget {
         appBarTheme: AppBarTheme(
           titleTextStyle: TextStyle(
             fontFamily: 'Helvetica',
-            // fontWeight: FontWeight.w700,
             fontSize: 18,
-            // color: Colors.white,
+            color: Colors.black,
           ),
           centerTitle: true,
-          color: Color(0xFFE66A73),
+          color: Colors.white,
         ),
       ),
       getPages: routes(),

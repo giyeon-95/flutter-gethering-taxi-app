@@ -16,7 +16,16 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Jenny'),
+        leading:  IconButton(
+            onPressed: () {
+              Navigator.pop(context); //뒤로가기
+            },
+            color: Colors.black,
+            icon: Icon(Icons.arrow_back)),
+        title: Text(
+          'Jenny',
+          style: TextStyle(color: Colors.black),
+        ),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -67,6 +76,7 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
               children: [
                 Container(
                   decoration: BoxDecoration(
+                    color: Theme.of(context).primaryColor,
                     border: Border.all(
                         color: Theme.of(context).primaryColor, width: 1.5),
                     borderRadius: BorderRadius.only(
@@ -79,7 +89,7 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
                     padding: const EdgeInsets.symmetric(
                         vertical: 10, horizontal: 20),
                     child: Text('Shall We Dance? ',
-                        style: Theme.of(context).textTheme.bodyText1),
+                        style: Theme.of(context).textTheme.bodyText1.copyWith(color: Colors.white)),
                   ),
                 ),
                 const SizedBox(width: 5),
@@ -104,8 +114,10 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
             padding: const EdgeInsets.only(left: 160),
             child: Row(
               children: [
-                Text(time,
-                  style: TextStyle(color: Colors.grey, fontSize: 11),),
+                Text(
+                  time,
+                  style: TextStyle(color: Colors.grey, fontSize: 11),
+                ),
                 const SizedBox(width: 10),
                 Container(
                   decoration: BoxDecoration(
@@ -118,8 +130,8 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
                     ),
                   ),
                   child: Padding(
-                    padding:
-                        const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 20),
                     child: Text('Shall We Dance? ',
                         textAlign: TextAlign.right,
                         style: Theme.of(context).textTheme.bodyText1),

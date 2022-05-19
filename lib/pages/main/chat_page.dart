@@ -26,7 +26,7 @@ class _ChatPageState extends State<ChatPage> {
     return Scaffold(
         appBar: AppBar(
           title: Center(
-            child: Text('CHAT'),
+            child: Text('CHAT', style: TextStyle(color: Colors.black),),
           ),
           actions: [
             Padding(
@@ -35,7 +35,7 @@ class _ChatPageState extends State<ChatPage> {
                 icon: Icon(
                   Icons.add,
                   size: 25,
-                  color: Colors.white,
+                  color: Colors.black,
                 ),
                 onPressed: () {
                   print('wow');
@@ -74,7 +74,7 @@ class _ChatPageState extends State<ChatPage> {
               subtitle: Text('Hello My friend!'),
               trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
-                print('horse');
+                Get.toNamed(ChatRoomPage.url);
               },
             ),
             ListTile(
@@ -88,7 +88,7 @@ class _ChatPageState extends State<ChatPage> {
               subtitle: Text('Hello My friend!'),
               trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
-                print('horse');
+                Get.toNamed(ChatRoomPage.url);
               },
             ),
             ListTile(
@@ -103,7 +103,7 @@ class _ChatPageState extends State<ChatPage> {
               subtitle: Text('Hello My friend!'),
               trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
-                print('horse');
+                Get.toNamed(ChatRoomPage.url);
               },
             ),
             ListTile(
@@ -117,7 +117,7 @@ class _ChatPageState extends State<ChatPage> {
               subtitle: Text('Hello My friend!'),
               trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
-                print('horse');
+                Get.toNamed(ChatRoomPage.url);
               },
             ),
             ListTile(
@@ -132,7 +132,7 @@ class _ChatPageState extends State<ChatPage> {
               subtitle: Text('Hello My friend!'),
               trailing: Icon(Icons.keyboard_arrow_right),
               onTap: () {
-                print('horse');
+                Get.toNamed(ChatRoomPage.url);
               },
             ),
           ],
