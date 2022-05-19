@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
-      debugShowCheckedModeBanner: false ,
+      debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.light,
       theme: ThemeData.light().copyWith(
         // backgroundColor: Color(0xff5C5D75),
@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
             fontSize: 17,
             color: Colors.black,
           ),
-          centerTitle: true,
+          // centerTitle: true,
           color: Colors.white,
         ),
       ),
