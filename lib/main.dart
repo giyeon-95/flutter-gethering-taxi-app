@@ -1,4 +1,4 @@
-import 'package:database_project/login_screen.dart';
+import 'package:database_project/signin_page.dart';
 import 'package:flutter/material.dart';
 import 'package:database_project/welcome_screen.dart';
 import 'package:database_project/registration_screen.dart';
@@ -11,11 +11,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: WelcomeScreen.id,
+      initialRoute: SignInPage.id,
       routes: {
-        WelcomeScreen.id: (context) => WelcomeScreen(),
         RegistrationScreen.id: (context) => RegistrationScreen(),
-        LoginScreen.id: (context) => LoginScreen(),
+        SignInPage.id : (context) =>SignInPage(),
       },
     );
   }

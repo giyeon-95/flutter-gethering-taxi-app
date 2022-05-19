@@ -15,7 +15,7 @@ final kBasicFontStyle = TextStyle(
   color: Colors.black,
   fontWeight: FontWeight.w500,
   fontFamily: 'OpenSans',
-  fontSize: 10,
+  fontSize: 12,
 );
 
 final kBoxDecorationStyle = BoxDecoration(

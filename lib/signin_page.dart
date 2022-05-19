@@ -1,15 +1,17 @@
-import 'package:database_project/registration_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:database_project/config/constants.dart';
+import 'package:database_project/registration_screen.dart';
 
-class WelcomeScreen extends StatefulWidget {
-  static const String id = 'welcome_screen';
+class SignInPage extends StatefulWidget {
+  static const String id = 'login_page';
+
+  static const url = "/signin";
 
   @override
-  _WelcomeScreenState createState() => _WelcomeScreenState();
+  State<SignInPage> createState() => _SignInPageState();
 }
 
-class _WelcomeScreenState extends State<WelcomeScreen> {
+class _SignInPageState extends State<SignInPage> {
   bool _rememberMe = false;
 
   Widget _buildEmailTF() {
@@ -136,7 +138,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
         ),
         color: Color(0xFFE66A73),
         child: Text(
-          'Sign In',
+          'Login',
           style: TextStyle(
             color: Colors.white,
             letterSpacing: 1.5,

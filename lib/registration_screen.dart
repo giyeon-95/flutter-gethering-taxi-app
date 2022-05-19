@@ -1,6 +1,6 @@
 import 'package:database_project/welcome_screen.dart';
 import 'package:flutter/material.dart';
-import 'package:database_project/constants.dart';
+import 'package:database_project/config/constants.dart';
 
 class RegistrationScreen extends StatefulWidget {
   static const String id = 'registration_screen';
@@ -82,19 +82,41 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     );
   }
 
-  Widget _buildForgotPasswordBtn() {
-    return Container(
-      alignment: Alignment.centerRight,
-      child: FlatButton(
-        onPressed: () => print('Forgot Password Button Pressed'),
-        padding: EdgeInsets.only(right: 0.0),
-        child: Text(
-          'Forgot Password?',
+
+  Widget _buildPhoneNumTF() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        Text(
+          'Phone Number',
           style: kLabelStyle,
         ),
-      ),
+        const SizedBox(height: 10.0),
+        Container(
+          alignment: Alignment.centerLeft,
+          decoration: kBoxDecorationStyle,
+          height: 60.0,
+          child: TextField(
+            style: TextStyle(
+              color: Colors.black,
+              fontFamily: 'OpenSans',
+            ),
+            decoration: InputDecoration(
+              border: InputBorder.none,
+              contentPadding: EdgeInsets.only(top: 14.0),
+              prefixIcon: Icon(
+                Icons.phone,
+                color: Color(0xFFE66A73),
+              ),
+              hintText: 'Enter Phone number..',
+              hintStyle: kHintTextStyle,
+            ),
+          ),
+        ),
+      ],
     );
   }
+
 
   Widget _buildRememberMeCheckbox() {
     return Container(
@@ -149,6 +171,34 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
     );
   }
 
+
+  //결제수단 등록 버튼
+  Widget _buildPaymentBtn() {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 25.0),
+      width: double.infinity,
+      child: RaisedButton(
+        elevation: 5.0,
+        onPressed: () => print('Login Button Pressed'),
+        padding: EdgeInsets.all(15.0),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10.0),
+        ),
+        color: Colors.white,
+        child: Text(
+          'Add Payment Method',
+          style: TextStyle(
+            color: Color(0xFFE66A73),
+            letterSpacing: 1.5,
+            fontSize: 18.0,
+            fontWeight: FontWeight.w500,
+            fontFamily: 'OpenSans',
+          ),
+        ),
+      ),
+    );
+  }
+
   Widget _buildSignupBtn() {
     return Center(
       child: GestureDetector(
@@ -184,52 +234,60 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(
-        children: <Widget>[
-          Container(
-            height: double.infinity,
-            width: double.infinity,
-          ),
-          Container(
-            height: double.infinity,
-            child: SingleChildScrollView(
-              physics: AlwaysScrollableScrollPhysics(),
-              padding: EdgeInsets.symmetric(
-                horizontal: 30.0,
-                vertical: 110.0,
-              ),
-              child: Column(
-                // mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    'Sign Up',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'OpenSans',
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(
-                    height: 30,
-                  ),
-                  _buildEmailTF(),
-                  SizedBox(
-                    height: 30,
-                  ),
-                  _buildPasswordTF(),
-                  // _buildForgotPasswordBtn(),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  _buildRememberMeCheckbox(),
-                  _buildLoginBtn(),
-                  _buildSignupBtn(),
-                ],
+      body: Padding(
+        padding: const EdgeInsets.only(top: 50),
+        child: Stack(
+          children: <Widget>[
+            Container(
+              height: double.infinity,
+              width: double.infinity,
+            ),
+            Container(
+              height: double.infinity,
+              child: SingleChildScrollView(
+                physics: AlwaysScrollableScrollPhysics(),
+                padding: EdgeInsets.symmetric(
+                  horizontal: 30.0,
+                  vertical: 110.0,
+                ),
+                child: Column(
+                  // mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(
+                      'Sign Up',
+                      style: TextStyle(
+                          color: Colors.black,
+                          fontFamily: 'OpenSans',
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
+                    ),
+                    const SizedBox(
+                      height: 30,
+                    ),
+                    _buildEmailTF(),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    _buildPasswordTF(),
+                    // _buildForgotPasswordBtn(),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    _buildPhoneNumTF(),
+                    const SizedBox(
+                      height: 10,
+                    ),
+                    _buildPaymentBtn(),
+                    _buildRememberMeCheckbox(),
+                    _buildLoginBtn(),
+                    _buildSignupBtn(),
+                  ],
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
