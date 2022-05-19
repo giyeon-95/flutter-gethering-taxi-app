@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomePage extends StatefulWidget {
   static const url = "/home";
@@ -22,6 +23,53 @@ class _HomePageState extends State<HomePage> {
               title: _buildHomeContainer(
                   from: "Triple Street Back Gate",
                   to: "Sunny Korea",
+                  left: "3",
+                  limit: "/5",
+                  time: "10:30 AM - 10:40 AM",
+                  people: "5",
+                  cost: "5,000",
+                  costPer: "/ 1,000 won per person"),
+              onTap: () {
+                // Get.toNamed(ChatRoomPage.url);
+              },
+              // selected: true,
+            ),
+            ListTile(
+              title: _buildHomeContainer(
+                  from: "Bus Terminal",
+                  to: "Songdo Yonsei University",
+                  left: "1",
+                  limit: "/4",
+                  time: "14:00 PM - 2:30 PM",
+                  people: "4",
+                  cost: "11,000",
+                  costPer: "/ 3,000 won per person"),
+              onTap: () {
+                // Get.toNamed(ChatRoomPage.url);
+              },
+              // selected: true,
+            ),
+            ListTile(
+              title: _buildHomeContainer(
+                  from: "Gangnam 1 Cha APT Gate 2",
+                  to: "CheongDam Lotte Cinema",
+                  left: "2",
+                  limit: "/4",
+                  time: "9:30 AM - 10:30 AM",
+                  people: "4",
+                  cost: "4,000",
+                  costPer: "/ 1,000 won per person"),
+              onTap: () {
+                // Get.toNamed(ChatRoomPage.url);
+              },
+              // selected: true,
+            ),
+            ListTile(
+              title: _buildHomeContainer(
+                  from: "Triple Street Back Gate",
+                  to: "Sunny Korea",
+                  left: "1",
+                  limit: "/5",
                   time: "10:30 AM - 10:40 AM",
                   people: "5",
                   cost: "5,000",
@@ -35,6 +83,8 @@ class _HomePageState extends State<HomePage> {
               title: _buildHomeContainer(
                   from: "Triple Street Back Gate",
                   to: "Sunny Korea",
+                  left: "0",
+                  limit: "/5",
                   time: "10:30 AM - 10:40 AM",
                   people: "5",
                   cost: "5,000",
@@ -48,45 +98,8 @@ class _HomePageState extends State<HomePage> {
               title: _buildHomeContainer(
                   from: "Triple Street Back Gate",
                   to: "Sunny Korea",
-                  time: "10:30 AM - 10:40 AM",
-                  people: "5",
-                  cost: "5,000",
-                  costPer: "/ 1,000 won per person"),
-              onTap: () {
-                // Get.toNamed(ChatRoomPage.url);
-              },
-              // selected: true,
-            ),
-            ListTile(
-              title: _buildHomeContainer(
-                  from: "Triple Street Back Gate",
-                  to: "Sunny Korea",
-                  time: "10:30 AM - 10:40 AM",
-                  people: "5",
-                  cost: "5,000",
-                  costPer: "/ 1,000 won per person"),
-              onTap: () {
-                // Get.toNamed(ChatRoomPage.url);
-              },
-              // selected: true,
-            ),
-            ListTile(
-              title: _buildHomeContainer(
-                  from: "Triple Street Back Gate",
-                  to: "Sunny Korea",
-                  time: "10:30 AM - 10:40 AM",
-                  people: "5",
-                  cost: "5,000",
-                  costPer: "/ 1,000 won per person"),
-              onTap: () {
-                // Get.toNamed(ChatRoomPage.url);
-              },
-              // selected: true,
-            ),
-            ListTile(
-              title: _buildHomeContainer(
-                  from: "Triple Street Back Gate",
-                  to: "Sunny Korea",
+                  left: "3",
+                  limit: "/5",
                   time: "10:30 AM - 10:40 AM",
                   people: "5",
                   cost: "5,000",
@@ -105,6 +118,8 @@ class _HomePageState extends State<HomePage> {
   Widget _buildHomeContainer(
       {String from,
       String to,
+      String left,
+      String limit,
       String time,
       String people,
       String cost,
@@ -142,14 +157,19 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Row(
                       children: [
+                        FaIcon(
+                          FontAwesomeIcons.userAlt,
+                          size: 11,
+                        ),
+                        const SizedBox(width: 3),
                         Text(
-                          '3',
+                          left,
                           style: TextStyle(
                             color: Theme.of(context).primaryColor,
                           ),
                         ),
                         Text(
-                          '/5',
+                          limit,
                           style: TextStyle(fontSize: 11, color: Colors.grey),
                         ),
                       ],
