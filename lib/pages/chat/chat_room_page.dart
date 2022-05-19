@@ -16,7 +16,7 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('CHAT'),
+        title: Text('Jenny'),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -24,10 +24,10 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
           Container(
             child: Column(
               children: [
-                _buildLeftBalloon(),
-                _buildLeftBalloon(),
-                _buildRightBalloon(),
-                _buildLeftBalloon(),
+                _buildLeftBalloon("15:20"),
+                _buildLeftBalloon("15:25"),
+                _buildRightBalloon("15:30"),
+                _buildLeftBalloon("15:40"),
               ],
             ),
           ),
@@ -53,7 +53,7 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
     );
   }
 
-  Widget _buildLeftBalloon() {
+  Widget _buildLeftBalloon(String time) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 3.0),
       child: Container(
@@ -62,23 +62,32 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
             backgroundImage: NetworkImage(imgUrl1),
           ),
           title: Padding(
-            padding: const EdgeInsets.only(right: 150),
-            child: Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                    color: Theme.of(context).primaryColor, width: 1.5),
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(40),
-                  topLeft: Radius.circular(40),
-                  bottomRight: Radius.circular(40),
+            padding: const EdgeInsets.only(right: 100),
+            child: Row(
+              children: [
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Theme.of(context).primaryColor, width: 1.5),
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(40),
+                      topLeft: Radius.circular(40),
+                      bottomRight: Radius.circular(40),
+                    ),
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 10, horizontal: 20),
+                    child: Text('Shall We Dance? ',
+                        style: Theme.of(context).textTheme.bodyText1),
+                  ),
                 ),
-              ),
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                child: Text('Shall We Dance? ',
-                    style: Theme.of(context).textTheme.bodyText1),
-              ),
+                const SizedBox(width: 5),
+                Text(
+                  time,
+                  style: TextStyle(color: Colors.grey, fontSize: 11),
+                ),
+              ],
             ),
           ),
         ),
@@ -86,30 +95,37 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
     );
   }
 
-  Widget _buildRightBalloon() {
+  Widget _buildRightBalloon(String time) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 3.0),
       child: Container(
         child: ListTile(
           title: Padding(
-            padding: const EdgeInsets.only(left: 200),
-            child: Container(
-              decoration: BoxDecoration(
-                border: Border.all(
-                    color: Theme.of(context).primaryColor, width: 1.5),
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(40),
-                  topLeft: Radius.circular(40),
-                  bottomLeft: Radius.circular(40),
+            padding: const EdgeInsets.only(left: 160),
+            child: Row(
+              children: [
+                Text(time,
+                  style: TextStyle(color: Colors.grey, fontSize: 11),),
+                const SizedBox(width: 10),
+                Container(
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                        color: Theme.of(context).primaryColor, width: 1.5),
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(40),
+                      topLeft: Radius.circular(40),
+                      bottomLeft: Radius.circular(40),
+                    ),
+                  ),
+                  child: Padding(
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+                    child: Text('Shall We Dance? ',
+                        textAlign: TextAlign.right,
+                        style: Theme.of(context).textTheme.bodyText1),
+                  ),
                 ),
-              ),
-              child: Padding(
-                padding:
-                    const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                child: Text('Shall We Dance? ',
-                    textAlign: TextAlign.right,
-                    style: Theme.of(context).textTheme.bodyText1),
-              ),
+              ],
             ),
           ),
         ),
