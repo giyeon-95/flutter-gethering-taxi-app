@@ -22,7 +22,7 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               title: _buildHomeContainer(
                   from: "Triple Street Back Gate",
-                  to: "Sunny Korea",
+                  to: "Suny Korea",
                   left: "3",
                   limit: "/5",
                   time: "10:30 AM - 10:40 AM",
@@ -67,7 +67,7 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               title: _buildHomeContainer(
                   from: "Triple Street Back Gate",
-                  to: "Sunny Korea",
+                  to: "Suny Korea",
                   left: "1",
                   limit: "/5",
                   time: "10:30 AM - 10:40 AM",
@@ -82,7 +82,7 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               title: _buildHomeContainer(
                   from: "Triple Street Back Gate",
-                  to: "Sunny Korea",
+                  to: "Suny Korea",
                   left: "0",
                   limit: "/5",
                   time: "10:30 AM - 10:40 AM",
@@ -97,7 +97,7 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               title: _buildHomeContainer(
                   from: "Triple Street Back Gate",
-                  to: "Sunny Korea",
+                  to: "Suny Korea",
                   left: "3",
                   limit: "/5",
                   time: "10:30 AM - 10:40 AM",

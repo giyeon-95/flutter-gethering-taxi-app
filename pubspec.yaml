@@ -22,9 +22,12 @@ environment:
 
 dependencies:
 
-  font_awesome_flutter: ^8.10.0
+  font_awesome_flutter:
   get:
   url_launcher:
+  flutter_rating_bar:
+  flutter_credit_card:
+  loading_animation_widget:
   flutter:
     sdk: flutter
 
