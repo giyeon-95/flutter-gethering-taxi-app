@@ -5,6 +5,7 @@ import 'package:database_project/pages/chat/chat_room_page.dart';
 import 'package:database_project/pages/etc/catching_complete_page.dart';
 import 'package:database_project/pages/etc/catching_taxi_page.dart';
 import 'package:database_project/pages/etc/write_review_page.dart';
+import 'package:database_project/pages/gathering/gathering_create_success_page.dart';
 import 'package:database_project/pages/main/home_page.dart';
 import 'package:database_project/pages/main_tab_page.dart';
 import 'package:database_project/pages/splash_page.dart';
@@ -34,4 +35,7 @@ routes () => [
 
   //REVIEW
   GetPage(name: WriteReviewPage.url, page: () => WriteReviewPage()),
+
+  //GATHERING
+  GetPage(name: GatheringCreateSuccessPage.url, page: () => GatheringCreateSuccessPage()),
 ];

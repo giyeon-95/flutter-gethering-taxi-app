@@ -1,4 +1,5 @@
 import 'package:database_project/config/routes.dart';
+import 'package:database_project/pages/gathering/gathering_create_success_page.dart';
 import 'package:database_project/pages/splash_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';

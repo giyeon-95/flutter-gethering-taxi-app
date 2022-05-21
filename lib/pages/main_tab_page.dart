@@ -1,3 +1,4 @@
+import 'package:database_project/pages/gathering/gathering_create_page.dart';
 import 'package:database_project/pages/main/Noti_page.dart';
 import 'package:database_project/pages/chat/chat_page.dart';
 import 'package:database_project/pages/main/home_page.dart';
@@ -18,7 +19,7 @@ class _MainTapPageState extends State<MainTapPage> {
 
   //이동페이지
   List _pages = [
-    SearchPage(),
+    GatheringCreatePage(),
     ChatPage(),
     HomePage(),
     NotiPage(),
@@ -52,7 +53,7 @@ class _MainTapPageState extends State<MainTapPage> {
         // 현재 선택된 index
         // BottomNavigationBarItem 위젯
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(label: 'Search', icon: Icon(Icons.search)),
+          BottomNavigationBarItem(label: 'Gathering', icon: Icon(Icons.local_taxi)),
           BottomNavigationBarItem(
               label: 'Chat', icon: Icon(Icons.chat_bubble_outline)),
           BottomNavigationBarItem(label: 'Home', icon: Icon(Icons.home)),
