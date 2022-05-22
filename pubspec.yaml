@@ -26,7 +26,9 @@ dependencies:
   get:
   url_launcher:
   flutter_rating_bar:
+  numberpicker:
   flutter_credit_card:
+  date_time_picker:
   loading_animation_widget:
   flutter:
     sdk: flutter
