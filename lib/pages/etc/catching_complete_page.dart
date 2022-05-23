@@ -20,6 +20,8 @@ class _CatchingCompletePageState extends State<CatchingCompletePage> {
       'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRQp4lhDaU5euiz73rltdxnoREBGhyvYIBp0LrESI09k9cLLmkB';
   String imgUrl4 =
       'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSZ6TeDFGGXiuKR36W9VBw93YeRuOf_-eaDmfqJ1InJONlGKnqV';
+  String imgUrl5 =
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp4OuyDSyetsQHOMwPfF8wex5DYWnBYAPqj7Z5MYR-yPxsf-Gi';
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +40,7 @@ class _CatchingCompletePageState extends State<CatchingCompletePage> {
                       style: Theme.of(context)
                           .textTheme
                           .bodyText1
-                          .copyWith(fontSize: 30, color: Colors.grey
+                          .copyWith(fontSize: 25, color: Colors.grey
                               // color: Theme.of(context).primaryColor,
                               ),
                     ),
@@ -71,7 +73,7 @@ class _CatchingCompletePageState extends State<CatchingCompletePage> {
                     color: Colors.grey,
                   ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 5),
             ListTile(
               onTap: () {},
               leading: CircleAvatar(
@@ -161,6 +163,31 @@ class _CatchingCompletePageState extends State<CatchingCompletePage> {
               ),
               subtitle: Text(
                 '010-2222-0000',
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyText1
+                    .copyWith(fontSize: 11),
+              ),
+              trailing: FaIcon(
+                FontAwesomeIcons.angleRight,
+                size: 17,
+                color: Colors.black,
+              ),
+            ),
+            ListTile(
+              onTap: () {},
+              leading: CircleAvatar(
+                backgroundImage: NetworkImage(imgUrl5),
+              ),
+              title: Text(
+                'Minjee',
+                style: Theme.of(context)
+                    .textTheme
+                    .bodyText1
+                    .copyWith(fontSize: 13),
+              ),
+              subtitle: Text(
+                '010-2222-1234',
                 style: Theme.of(context)
                     .textTheme
                     .bodyText1

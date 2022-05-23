@@ -7,16 +7,15 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/route_manager.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
-class GatheringCreateSuccessPage extends StatefulWidget {
-  static const url = "/gathering-create-success-page";
+class GatheringJoinSuccessPage extends StatefulWidget {
+  static const url = "/gathering-join-success-page";
 
   @override
-  State<GatheringCreateSuccessPage> createState() =>
-      _GatheringCreateSuccessPageState();
+  State<GatheringJoinSuccessPage> createState() =>
+      _GatheringJoinSuccessPageState();
 }
 
-class _GatheringCreateSuccessPageState
-    extends State<GatheringCreateSuccessPage> {
+class _GatheringJoinSuccessPageState extends State<GatheringJoinSuccessPage> {
   String imgUrl1 =
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8NG8tRjukxvrSbGk2CfWU_aw9yUjpnFqbAoORbc7lZityM2nl';
   String imgUrl2 =
@@ -27,7 +26,6 @@ class _GatheringCreateSuccessPageState
       'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSZ6TeDFGGXiuKR36W9VBw93YeRuOf_-eaDmfqJ1InJONlGKnqV';
   String imgUrl5 =
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp4OuyDSyetsQHOMwPfF8wex5DYWnBYAPqj7Z5MYR-yPxsf-Gi';
-
 
   @override
   Widget build(BuildContext context) {
@@ -45,9 +43,9 @@ class _GatheringCreateSuccessPageState
                     child: Text(
                       'Ready!',
                       style: Theme.of(context).textTheme.bodyText1.copyWith(
-                        color: Theme.of(context).primaryColor,
-                        fontSize: 30,
-                      ),
+                            color: Theme.of(context).primaryColor,
+                            fontSize: 30,
+                          ),
                     ),
                   ),
                 ),
@@ -56,9 +54,9 @@ class _GatheringCreateSuccessPageState
                   child: Text(
                     'Please wait for your members...',
                     style: Theme.of(context).textTheme.bodyText1.copyWith(
-                      color: Colors.grey,
-                      fontSize: 20,
-                    ),
+                          color: Colors.grey,
+                          fontSize: 20,
+                        ),
                   ),
                 ),
 
@@ -106,8 +104,8 @@ class _GatheringCreateSuccessPageState
                                   .textTheme
                                   .bodyText1
                                   .copyWith(
-                                  fontSize: 20,
-                                  color: Theme.of(context).primaryColor),
+                                      fontSize: 20,
+                                      color: Theme.of(context).primaryColor),
                             ),
                           ],
                         ),
@@ -145,10 +143,10 @@ class _GatheringCreateSuccessPageState
               child: Text(
                 "Members",
                 style: Theme.of(context).textTheme.bodyText1.copyWith(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 15,
-                  color: Colors.grey,
-                ),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                      color: Colors.grey,
+                    ),
               ),
             ),
             const SizedBox(height: 10),

@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
             ListTile(
               title: _buildHomeContainer(
                   from: "Gangnam 1 Cha APT Gate 2",
-                  to: "CheongDam Lotte Cinema",
+                  to: "Ghent University",
                   left: "2",
                   limit: "/4",
                   time: "9:30 AM - 10:30 AM",

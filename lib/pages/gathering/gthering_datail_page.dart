@@ -1,3 +1,4 @@
+import 'package:database_project/pages/gathering/gathering_join_success_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 
@@ -159,14 +160,14 @@ class _GatheringDetailPageState extends State<GatheringDetailPage> {
               width: Get.width,
               child: RaisedButton(
                 elevation: 5.0,
-                onPressed: () => {},
+                onPressed: () => Get.toNamed(GatheringJoinSuccessPage.url),
                 padding: EdgeInsets.all(15.0),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0),
                 ),
                 color: Color(0xFFE66A73),
                 child: Text(
-                  'Apply for gathering',
+                  'Join',
                   style: TextStyle(
                     color: Colors.white,
                     letterSpacing: 1.5,

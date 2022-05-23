@@ -106,7 +106,7 @@ class _ChatPageState extends State<ChatPage> {
                   ),
                   const SizedBox(width: 10),
                   Text(
-                    'CheongDam Lotte Cinema',
+                    'Ghent University',
                     style: Theme.of(context)
                         .textTheme
                         .bodyText1

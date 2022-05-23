@@ -53,7 +53,7 @@ class _MainTapPageState extends State<MainTapPage> {
         // 현재 선택된 index
         // BottomNavigationBarItem 위젯
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(label: 'Gathering', icon: Icon(Icons.local_taxi)),
+          BottomNavigationBarItem(label: 'Search', icon: Icon(Icons.search)),
           BottomNavigationBarItem(
               label: 'Chat', icon: Icon(Icons.chat_bubble_outline)),
           BottomNavigationBarItem(label: 'Home', icon: Icon(Icons.home)),
