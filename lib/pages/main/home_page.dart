@@ -1,5 +1,7 @@
+import 'package:database_project/pages/gathering/gthering_datail_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/route_manager.dart';
 
 class HomePage extends StatefulWidget {
   static const url = "/home";
@@ -30,7 +32,7 @@ class _HomePageState extends State<HomePage> {
                   cost: "5,000",
                   costPer: "/ 1,000 won per person"),
               onTap: () {
-                // Get.toNamed(ChatRoomPage.url);
+                Get.toNamed(GatheringDetailPage.url);
               },
               // selected: true,
             ),
@@ -45,7 +47,7 @@ class _HomePageState extends State<HomePage> {
                   cost: "11,000",
                   costPer: "/ 3,000 won per person"),
               onTap: () {
-                // Get.toNamed(ChatRoomPage.url);
+                Get.toNamed(GatheringDetailPage.url);
               },
               // selected: true,
             ),
@@ -60,7 +62,7 @@ class _HomePageState extends State<HomePage> {
                   cost: "4,000",
                   costPer: "/ 1,000 won per person"),
               onTap: () {
-                // Get.toNamed(ChatRoomPage.url);
+                Get.toNamed(GatheringDetailPage.url);
               },
               // selected: true,
             ),
@@ -75,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                   cost: "5,000",
                   costPer: "/ 1,000 won per person"),
               onTap: () {
-                // Get.toNamed(ChatRoomPage.url);
+                Get.toNamed(GatheringDetailPage.url);
               },
               // selected: true,
             ),
@@ -90,7 +92,7 @@ class _HomePageState extends State<HomePage> {
                   cost: "5,000",
                   costPer: "/ 1,000 won per person"),
               onTap: () {
-                // Get.toNamed(ChatRoomPage.url);
+                Get.toNamed(GatheringDetailPage.url);
               },
               // selected: true,
             ),
@@ -105,7 +107,7 @@ class _HomePageState extends State<HomePage> {
                   cost: "5,000",
                   costPer: "/ 1,000 won per person"),
               onTap: () {
-                // Get.toNamed(ChatRoomPage.url);
+                Get.toNamed(GatheringDetailPage.url);
               },
               // selected: true,
             ),
