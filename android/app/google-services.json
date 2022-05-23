@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "25207652266",
+    "firebase_url": "https://database-project-5b97a.firebaseio.com",
+    "project_id": "database-project-5b97a",
+    "storage_bucket": "database-project-5b97a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25207652266:android:caf1c88e3a92e65193f5d3",
+        "android_client_info": {
+          "package_name": "juhokim.database_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25207652266-l3tr12fif3f8snmk9or0q6se495mqf3c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASkc8jRE9fx6gE6aeYnyiBcMyzCN2HnUs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25207652266-l3tr12fif3f8snmk9or0q6se495mqf3c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
