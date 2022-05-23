@@ -29,7 +29,7 @@ class _CatchingTaxiState extends State<CatchingTaxi> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Cathing Taxi ...',
+              'Catching Taxi ...',
               style: Theme.of(context).textTheme.bodyText2.copyWith(
                   fontSize: 30, color: Theme.of(context).primaryColor),
             ),
