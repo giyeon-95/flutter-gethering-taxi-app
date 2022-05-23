@@ -1,21 +1,18 @@
 import 'package:database_project/components/dialog.dart';
-import 'package:database_project/pages/chat/chat_page.dart';
 import 'package:database_project/pages/chat/chat_room_page.dart';
 import 'package:database_project/pages/main_tab_page.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/route_manager.dart';
-import 'package:loading_animation_widget/loading_animation_widget.dart';
 
-class GatheringJoinSuccessPage extends StatefulWidget {
-  static const url = "/gathering-join-success-page";
+class GatheringReadyPage extends StatefulWidget {
+  static const url = "/gathering-ready-page";
 
   @override
-  State<GatheringJoinSuccessPage> createState() =>
-      _GatheringJoinSuccessPageState();
+  State<GatheringReadyPage> createState() => _GatheringReadyPageState();
 }
 
-class _GatheringJoinSuccessPageState extends State<GatheringJoinSuccessPage> {
+class _GatheringReadyPageState extends State<GatheringReadyPage> {
   String imgUrl1 =
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8NG8tRjukxvrSbGk2CfWU_aw9yUjpnFqbAoORbc7lZityM2nl';
   String imgUrl2 =
@@ -26,6 +23,7 @@ class _GatheringJoinSuccessPageState extends State<GatheringJoinSuccessPage> {
       'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSZ6TeDFGGXiuKR36W9VBw93YeRuOf_-eaDmfqJ1InJONlGKnqV';
   String imgUrl5 =
       'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp4OuyDSyetsQHOMwPfF8wex5DYWnBYAPqj7Z5MYR-yPxsf-Gi';
+
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +39,7 @@ class _GatheringJoinSuccessPageState extends State<GatheringJoinSuccessPage> {
                   padding: const EdgeInsets.only(top: 50.0),
                   child: Center(
                     child: Text(
-                      'Joined!',
+                      'Ready!',
                       style: Theme.of(context).textTheme.bodyText1.copyWith(
                             color: Theme.of(context).primaryColor,
                             fontSize: 30,
@@ -59,7 +57,6 @@ class _GatheringJoinSuccessPageState extends State<GatheringJoinSuccessPage> {
                         ),
                   ),
                 ),
-
                 const SizedBox(height: 30),
 
                 //현재 모집 명 수
@@ -70,7 +67,7 @@ class _GatheringJoinSuccessPageState extends State<GatheringJoinSuccessPage> {
                         child: Column(
                           children: [
                             Text(
-                              'Current number of',
+                              'Current numbers of',
                               style: Theme.of(context)
                                   .textTheme
                                   .bodyText1
@@ -118,12 +115,6 @@ class _GatheringJoinSuccessPageState extends State<GatheringJoinSuccessPage> {
               ],
             ),
             _buildBtn2(),
-            // Row(
-            //   children: [
-            //     Expanded(child: _buildBtn('chat')),
-            //     Expanded(child: _buildBtn('home')),
-            //   ],
-            // ),
           ],
         ),
       ),
@@ -281,6 +272,7 @@ class _GatheringJoinSuccessPageState extends State<GatheringJoinSuccessPage> {
     );
   }
 
+
   Widget _buildBtn2() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
@@ -314,35 +306,35 @@ class _GatheringJoinSuccessPageState extends State<GatheringJoinSuccessPage> {
     );
   }
 
-//버튼
-// Widget _buildBtn(String type) {
-//   return Padding(
-//     padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-//     child: Container(
-//       child: RaisedButton(
-//         elevation: 5.0,
-//         onPressed: () => {
-//           if (type == 'chat')
-//             {Get.toNamed(ChatRoomPage.url)}
-//           else
-//             {Get.toNamed(MainTapPage.url)}
-//         },
-//         shape: RoundedRectangleBorder(
-//           borderRadius: BorderRadius.circular(10.0),
-//         ),
-//         color: type == 'chat' ? Theme.of(context).primaryColor : Colors.white,
-//         child: Text(
-//           type == 'chat' ? 'Create chat' : 'Go back to home',
-//           style: TextStyle(
-//             color: type == 'chat' ? Colors.white : Color(0xFFE66A73),
-//             letterSpacing: 1.5,
-//             fontSize: 15.0,
-//             fontWeight: FontWeight.w500,
-//             fontFamily: 'OpenSans',
-//           ),
-//         ),
-//       ),
-//     ),
-//   );
-// }
+  //버튼
+  Widget _buildBtn(String type) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+      child: Container(
+        child: RaisedButton(
+          elevation: 5.0,
+          onPressed: () => {
+            if (type == 'chat')
+              {Get.toNamed(ChatRoomPage.url)}
+            else
+              {Get.toNamed(MainTapPage.url)}
+          },
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0),
+          ),
+          color: type == 'chat' ? Theme.of(context).primaryColor : Colors.white,
+          child: Text(
+            type == 'chat' ? 'Create chat' : 'Go back to home',
+            style: TextStyle(
+              color: type == 'chat' ? Colors.white : Color(0xFFE66A73),
+              letterSpacing: 1.5,
+              fontSize: 15.0,
+              fontWeight: FontWeight.w500,
+              fontFamily: 'OpenSans',
+            ),
+          ),
+        ),
+      ),
+    );
+  }
 }
