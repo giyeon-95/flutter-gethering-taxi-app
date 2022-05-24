@@ -175,7 +175,7 @@ class _ChatPageState extends State<ChatPage> {
                   ),
                   const SizedBox(width: 10),
                   Text(
-                    '15 Hakdong-ro 47-gil',
+                    'Suny Korea',
                     style: Theme.of(context)
                         .textTheme
                         .bodyText1
@@ -209,7 +209,7 @@ class _ChatPageState extends State<ChatPage> {
                   ),
                   const SizedBox(width: 10),
                   Text(
-                    '13 Seolleung-ro 62-gil',
+                    'Suny Korea',
                     style: Theme.of(context)
                         .textTheme
                         .bodyText1
@@ -244,7 +244,7 @@ class _ChatPageState extends State<ChatPage> {
                   ),
                   const SizedBox(width: 10),
                   Text(
-                    '906-23 Daechi-dong',
+                    'Suny Korea',
                     style: Theme.of(context)
                         .textTheme
                         .bodyText1

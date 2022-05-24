@@ -19,6 +19,7 @@ class _FlutterDialogState extends State<FlutterDialog> {
         children: [
           Text("Payment cannot be canceled."),
           Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               FaIcon(
                 FontAwesomeIcons.exclamationCircle,
@@ -27,10 +28,14 @@ class _FlutterDialogState extends State<FlutterDialog> {
               ),
               const SizedBox(width: 5),
               Text(
-                "No refund even if you cancel your gathering",
+                "No refund even if",
                 style: TextStyle(fontSize: 10),
               ),
             ],
+          ),
+          Text(
+            "you cancel your gathering",
+            style: TextStyle(fontSize: 10),
           ),
         ],
       ),

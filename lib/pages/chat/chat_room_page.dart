@@ -63,11 +63,11 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
           Container(
             child: Column(
               children: [
-                _buildLeftBalloon("15:20", imgUrl1),
-                _buildLeftBalloon("15:25", imgUrl2),
+                _buildLeftBalloon("15:20", imgUrl1, "Hi"),
+                _buildLeftBalloon("15:25", imgUrl2,  "Hello"),
                 _buildRightBalloon("15:30"),
-                _buildLeftBalloon("15:40", imgUrl3),
-                _buildLeftBalloon("15:40", imgUrl4),
+                _buildLeftBalloon("15:40", imgUrl3,   "Where are you right now ?"),
+                _buildLeftBalloon("15:40", imgUrl4, 'I\'m still at home.. sry'),
               ],
             ),
           ),
@@ -93,7 +93,7 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
     );
   }
 
-  Widget _buildLeftBalloon(String time, String url) {
+  Widget _buildLeftBalloon(String time, String url,  String text) {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 3.0),
       child: Container(
@@ -102,7 +102,7 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
             backgroundImage: NetworkImage(url),
           ),
           title: Padding(
-            padding: const EdgeInsets.only(right: 100),
+            padding: const EdgeInsets.only(right: 60),
             child: Row(
               children: [
                 Container(
@@ -119,7 +119,7 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                         vertical: 10, horizontal: 20),
-                    child: Text('Shall We Dance? ',
+                    child: Text(text,
                         style: Theme.of(context)
                             .textTheme
                             .bodyText1
@@ -145,7 +145,7 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
       child: Container(
         child: ListTile(
           title: Padding(
-            padding: const EdgeInsets.only(left: 150),
+            padding: const EdgeInsets.only(left: 250),
             child: Row(
               children: [
                 Text(
@@ -166,7 +166,7 @@ class _ChatRoomPageState extends State<ChatRoomPage> {
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
                         vertical: 10, horizontal: 20),
-                    child: Text('Shall We Dance? ',
+                    child: Text('Hi!',
                         textAlign: TextAlign.right,
                         style: Theme.of(context).textTheme.bodyText1),
                   ),
